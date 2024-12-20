@@ -2,6 +2,7 @@
 
 * Студент: [Сергей Герольд](https://up.htmlacademy.ru/htmlcss-individual/2/user/1404943).
 * Наставник: [Евгения Подопригора](https://htmlacademy.ru/profile/id2387199).
+* Сайт проекта: [Sedona](https://heroldserg89.github.io/1404943-sedona-2/)
 
 ---
 
