@@ -456,7 +456,7 @@ img {
 }
 
 .advantage__img {
-  aspect-ratio: 2 / 1;
+  min-width: 385px;
 }
 
 .advantage--img-left .advantage__img {
@@ -754,6 +754,7 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-transform: capitalize;
 }
 
 .filter-form__list {
