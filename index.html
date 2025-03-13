@@ -128,7 +128,8 @@
     <div class="search__wrapper container">
       <div class="search__headline headline">
         <h2 class="headline__title">Заинтересовались?</h2>
-        <p class="headline__desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="headline__desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц
+          в Седоне</p>
       </div>
       <a class="search__link button button--big" href="catalog.html">Поиск гостиницы в Седоне</a>
     </div>
@@ -222,7 +223,7 @@
         </p>
         <div class="form-reservation__block">
           <p class="form-reservation__field">
-            <label class="form-reservation__label">Взрослые:</label>
+            <label class="form-reservation__label" for="count-member">Взрослые:</label>
             <span class="form-reservation__input-number input-number">
                 <button class="input-number__button input-number__button--left" type="button">
                   <span class="visually-hidden">Уменьшить</span>
@@ -231,7 +232,7 @@
                     <path d="M3 9V11H17V9H3Z"/>
                   </svg>
                 </button>
-                <input class="input-number__input input" type="text" name="count-member" value="2">
+                <input class="input-number__input input" id="count-member" type="text" name="count-member" value="2">
                 <button class="input-number__button input-number__button--right" type="button">
                   <span class="visually-hidden">Увеличить</span>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
@@ -243,7 +244,7 @@
           </p>
           <p class="form-reservation__field">
               <span class="form-reservation__field-block">
-                <label class="form-reservation__label">Дети</label>
+                <label class="form-reservation__label" for="count-child">Дети</label>
                 <span class="form-reservation__field-tooltip tooltip">
                   <button class="tooltip__button" type="button">
                     <span class="visually-hidden">Информация</span>
@@ -259,7 +260,7 @@
                     <path d="M3 9V11H17V9H3Z"/>
                   </svg>
                 </button>
-                <input class="input-number__input input" type="text" name="count-child" value="2">
+                <input class="input-number__input input" id="count-child" type="text" name="count-child" value="2">
                 <button class="input-number__button input-number__button--right" type="button">
                   <span class="visually-hidden">Увеличить</span>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
