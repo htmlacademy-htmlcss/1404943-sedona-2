@@ -29,9 +29,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
   color: #333333;
   font-family: PTsans, sans-serif;
+  max-width: 1200px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .content {
@@ -57,8 +60,6 @@ img {
 }
 
 .container {
-  width: 1200px;
-  margin-inline: auto;
   padding-inline: 70px;
 }
 
@@ -90,11 +91,6 @@ img {
   background-color: #756157;
 }
 
-.button:focus-visible {
-  outline: 3px solid #83b3d3;
-  outline-offset: -3px;
-}
-
 .button--big {
   font-size: 20px;
   line-height: 36px;
@@ -106,10 +102,6 @@ img {
 
 .button--secondary:hover {
   background-color: #68a2ca;
-}
-
-.button--secondary:focus-visible {
-  outline-color: #000000;
 }
 
 .button--secondary:active {
@@ -167,7 +159,8 @@ img {
 }
 
 .logo__img {
-  aspect-ratio: 2 / 1;
+  width: 140px;
+  height: 70px;
 }
 
 .page-header__logo:hover {
@@ -192,6 +185,10 @@ img {
   display: flex;
   align-items: start;
   justify-content: space-between;
+}
+
+.nav__site-list {
+  width: 506px;
 }
 
 .nav__user-list {
@@ -289,6 +286,7 @@ img {
 }
 
 .nav-user__badge {
+  color: #ffffff;
   position: absolute;
   top: 10px;
   right: 4px;
@@ -308,7 +306,7 @@ img {
 .hero__wrapper {
   min-height: 485px;
   text-align: center;
-  background-color: #90bdda;
+  background-color: #333333;
   background-image: url("../img/hero-decor.svg"), url("../img/welcome-bg.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 0 100%, 0 0;
@@ -495,7 +493,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #82b3d3;
+  background-color: #333333;
   background-image: url("../img/subscribe-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -561,6 +559,10 @@ img {
   outline: 3px solid #83b3d3;
 }
 
+.input:disabled {
+  opacity: 0.5;
+}
+
 .field-number {
   position: relative;
   display: inline-flex;
@@ -601,7 +603,7 @@ img {
 }
 
 .main-footer__social-list {
-  max-width: 200px;
+  width: 142px;;
   flex-shrink: 0;
 }
 
@@ -667,6 +669,11 @@ img {
   transition: color 0.2s;
 }
 
+.developer-link svg {
+  width: 115px;
+  height: 34px;
+}
+
 .developer-link:hover {
   color: #756157;
 }
@@ -682,7 +689,7 @@ img {
 .catalog-header__wrapper {
   padding-block: 35px 70px;
   color: #ffffff;
-  background-color: #2b3d47;
+  background-color: #333333;
   background-image: url("../img/catalog-header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -867,7 +874,7 @@ img {
 }
 
 .field-sorting {
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
   font-size: 18px;
   font-family: inherit;
   line-height: 24px;
@@ -959,7 +966,7 @@ img {
 }
 
 .catalog__views {
-  max-width: 220px;
+  max-width: 160px;
   flex-shrink: 0;
 }
 
@@ -1021,8 +1028,14 @@ img {
   transition: box-shadow 0.2s;
 }
 
-.product__img {
+.product__img-link {
   grid-column: 1/-1;
+}
+
+.product__img {
+  width: 300px;
+  height: 212px;
+
 }
 
 .product__link {
@@ -1166,26 +1179,34 @@ img {
 }
 
 .modal {
-  width: 717px;
-  margin-bottom: auto;
-  padding: 0;
+  position: fixed;
   overflow: visible;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  inset: 0;
+  background-color: rgba(242, 242, 242, 0.8);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal--open {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__wrapper {
+  position: relative;
+  width: 717px;
   padding: 62px 70px;
-}
+  margin: 396px auto auto;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
 
-.modal__close {
-  position: absolute;
-  top: 64px;
-  right: 52px;
 }
 
 .modal__btn-close {
+  position: absolute;
+  top: 64px;
+  right: 52px;
   width: 52px;
   height: 52px;
   padding: 0;
@@ -1226,13 +1247,16 @@ img {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  margin-block: 0 23px;
 }
 
 .form-reservation__title {
-  margin-bottom: 64px;
+  margin-bottom: 67px;
   padding-right: 70px;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .form-reservation__block {
@@ -1243,12 +1267,16 @@ img {
 
 .form-reservation__submit {
   width: 100%;
-  margin-top: 48px;
+  border-radius: 10px;
+  margin-top: 27px;
+  padding-block: 10px;
 }
 
 .form-reservation__field-block {
+  padding-left: 10px;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .form-reservation__input {
@@ -1288,6 +1316,12 @@ img {
   padding-inline: 40px;
   width: 110px;
   text-align: center;
+}
+
+.input-number__input:disabled + .input-number__button {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .input-number__button {
