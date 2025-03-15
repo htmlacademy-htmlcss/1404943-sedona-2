@@ -2,7 +2,7 @@
   font-weight: 400;
   font-family: "PTsans";
   font-style: normal;
-  src: url("../fonts/PTsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-weight: 700;
   font-family: "PTsans";
   font-style: normal;
-  src: url("../fonts/PTsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -940,12 +940,16 @@ img {
   right: 0;
 }
 
+.range__button:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
 .range__button:focus-visible {
   outline: 3px solid #68a2ca;
 }
 
 .range__button:active {
-  outline-width: 2px;
+  outline: 2px solid #68a2ca;
 }
 
 .catalog__header {
@@ -1020,7 +1024,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  padding: 15px 0 40px;
+  padding: 12px 0 40px;
   list-style: none;
 }
 
@@ -1037,14 +1041,10 @@ img {
   transition: box-shadow 0.2s;
 }
 
-.product__img-link {
-  grid-column: 1/-1;
-}
-
 .product__img {
   width: 300px;
   height: 212px;
-
+  margin-bottom: 13px;
 }
 
 .product__link {
