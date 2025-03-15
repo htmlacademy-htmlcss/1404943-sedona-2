@@ -31,7 +31,7 @@ body {
   min-height: 100%;
   margin: 0 auto;
   color: #333333;
-  font-family: PTsans, sans-serif;
+  font-family: PTsans, Arial, sans-serif;
   max-width: 1200px;
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -746,6 +746,10 @@ img {
   opacity: 0.3;
 }
 
+.breadcrumbs__link--actual {
+  pointer-events: none;
+}
+
 .filter-form {
   display: flex;
   justify-content: space-between;
@@ -856,6 +860,11 @@ img {
 
 .field__input:checked + .field__check::before {
   opacity: 1;
+}
+
+.field:has(.field__input:disabled) {
+  pointer-events: none;
+  opacity: 0.2;
 }
 
 .field:hover {
@@ -1194,9 +1203,12 @@ img {
 
 .modal__wrapper {
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   width: 717px;
+  margin-inline: auto;
   padding: 62px 70px;
-  margin: 396px auto auto;
+
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
